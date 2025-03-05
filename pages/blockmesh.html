@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joining Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        h1{
+            background-color: skyblue;
+            display: inline;
+        }
+        .header-image {
+            width: 100%;
+            height: 30vh;
+            background: url('/pages/blockmesh/main.jpg') no-repeat center center/cover;
+        }
+        .container {
+            padding: 20px;
+        }
+        .btn {
+            display: inline-block;
+            /* background-color: lightgreen; */
+            background-color: yellowgreen;
+            color: black;
+            padding: 15px 25px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px 0;
+            cursor: pointer;
+            border: none;
+        }
+        .link-box {
+            background: #f4f4f4;
+            padding: 10px;
+            display: inline-block;
+            margin: 10px 0;
+        }
+        .images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            padding: 20px;
+        }
+        .images img {
+            width: 45%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 5px;
+        }
+        .footer {
+            background: #333;
+            color: white;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        @media (max-width: 600px) {
+            .images img {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header-image"></div>
+    <div class="container">
+        <h1 style="color: green; font-weight: bold;">BLOCKMESH NETWORK DEPIN PROJECT</h1>
+        <h2>For Laptop, Desktop, and PC Users</h2>
+        <a href="https://app.blockmesh.xyz/register?invite_code=1f7c9711-9087-4972-ae4a-d9444fb93ba9" target="_blank" class="btn">Joining Link</a>
+        
+        <h2>For Mobile Users</h2>
+        <p>Copy the link and paste in Kiwi or Mi Browser:</p>
+        <div class="link-box" id="copyText">https://app.blockmesh.xyz/register?invite_code=1f7c9711-9087-4972-ae4a-d9444fb93ba9</div>
+        <button class="btn" onclick="copyText()">Copy Link</button>
+
+        <h2>Refferal Code: </h2>
+        <div class="link-box" id="copycode">1f7c9711-9087-4972-ae4a-d9444fb93ba9</div>
+        <button class="btn" onclick="copycode()">Copy Link</button>
+        
+        <h3>Extension Link</h3>
+        <a href="https://chromewebstore.google.com/detail/blockmesh-network/obfhoiefijlolgdmphcekifedagnkfjp?hl=en" target="_blank" class="btn">Extension Link</a>
+    </div>
+    
+    <div class="images">
+        <img src="/pages/blockmesh/1.jpg" alt="Image 1">
+        <img src="/pages/blockmesh/2.jpg" alt="Image 2">
+        <img src="/pages/blockmesh/3.jpg" alt="Image 3">
+        <img src="/pages/blockmesh/4.png" alt="Image 4">
+    </div>
+    
+    <div class="footer">
+        &copy; 2025 Your Website. All Rights Reserved.
+    </div>
+
+    <script>
+        function copyText() {
+            let copyText = document.getElementById("copyText").innerText;
+            navigator.clipboard.writeText(copyText).then(() => {
+                alert("Link copied to clipboard!");
+            }).catch(err => {
+                console.error("Failed to copy: ", err);
+            });
+        }
+        function copycode() {
+            let copyText = document.getElementById("copycode").innerText;
+            navigator.clipboard.writeText(copyText).then(() => {
+                alert("Link copied to clipboard!");
+            }).catch(err => {
+                console.error("Failed to copy: ", err);
+            });
+        }
+    </script>
+</body>
+</html>
