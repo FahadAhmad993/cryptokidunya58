@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCM WALLET </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        h1{
+            background-color: black;
+            display: inline;
+        }
+        .header-image {
+            width: 100%;
+            height: 30vh;
+            background: url('pcm/main.jpeg') no-repeat center center/cover;
+        }
+        .container {
+            padding: 20px;
+        }
+        .btn {
+            display: inline-block;
+            /* background-color: lightgreen; */
+            background-color: yellowgreen;
+            color: black;
+            padding: 15px 25px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px 0;
+            cursor: pointer;
+            border: none;
+        }
+        .link-box {
+            background: #f4f4f4;
+            padding: 10px;
+            display: inline-block;
+            margin: 10px 0;
+        }
+        .images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            padding: 20px;
+        }
+        .images img {
+            width: 45%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 5px;
+        }
+        .footer {
+            background: #333;
+            color: white;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        @media (max-width: 600px) {
+            .images img {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header-image"></div>
+    <div class="container">
+        <h1 style="color: rgb(218, 75, 32); font-weight: bold;"> PCM WALLET MINING PROJECT</h1> 
+        
+        <h2>For Mobile Users</h2>
+        <a href="https://play.google.com/store/apps/details?id=com.pcm.pcmwallet&hl=en-US&pli=1" target="_blank" class="btn">Joining Link</a>
+
+        <h2>Refferal Code: </h2>
+        <div class="link-box" id="copycode">NP4SGK</div>
+        <button class="btn" onclick="copycode()">Copy code</button>
+        
+        <h2>APP Link</h2>
+        <a href="https://play.google.com/store/apps/details?id=com.pcm.pcmwallet&hl=en-US&pli=1" target="_blank" class="btn">Download Here</a>
+    </div>
+
+    <!-- <div class="video-container">
+        <a href="https://youtu.be/tTCkH5Ne71k?si=kFz0PfzI0PE8sVop" target="_blank">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/tTCkH5Ne71k?si=kFz0PfzI0PE8sVop" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>    
+        </a>
+    </div> -->
+    
+    <div class="images">
+        <img src="pcm/2.webp" alt="Image 1">
+        <img src="pcm/3.webp" alt="Image 2">
+        <img src="pcm/1.webp" alt="Image 3">
+        <img src="pcm/4.webp" alt="Image 4">
+    </div>
+    
+    <div class="footer">
+        &copy; 2025 Your Website. All Rights Reserved.
+    </div>
+
+    <script>
+        function copyText() {
+            let copyText = document.getElementById("copyText").innerText;
+            navigator.clipboard.writeText(copyText).then(() => {
+                alert("Link copied to clipboard!");
+            }).catch(err => {
+                console.error("Failed to copy: ", err);
+            });
+        }
+        function copycode() {
+            let copyText = document.getElementById("copycode").innerText;
+            navigator.clipboard.writeText(copyText).then(() => {
+                alert("Link copied to clipboard!");
+            }).catch(err => {
+                console.error("Failed to copy: ", err);
+            });
+        }
+    </script>
+</body>
+</html>
